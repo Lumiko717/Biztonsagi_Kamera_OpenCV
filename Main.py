@@ -12,7 +12,7 @@ root = tk.Tk()
 root.withdraw()
 UIP = simpledialog.askstring(title="IP Kamera", prompt="IP Kamera címe:")
 if not UIP:
-    root.filename = filedialog.askopenfilename(initialdir="/", title= "Valasszon video fajlt", filetypes=(("avi files", "*.avi"), ("all files", "*.*")))
+    root.filename = filedialog.askopenfilename(initialdir="/", title= "Valasszon video fajlt", filetypes=(("avi files", "*.*"), ("all files", "*.*")))
     felv = cv2.VideoCapture(root.filename)                         # Video forrás beolvasása fileból
 else:
     felv = cv2.VideoCapture(UIP)                                   # IP Video kép beolvasása
